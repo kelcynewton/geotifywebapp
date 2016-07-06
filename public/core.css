@@ -55,7 +55,7 @@ div.newThought {
 
 div.plainTextArea {
     padding:15px;
-    width:calc(100% - 15px;
+    width:calc(100% - 30px);
     border: 0 none white;
     overflow: hidden;
     outline: none;
