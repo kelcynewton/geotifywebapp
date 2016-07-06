@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="writer">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Chain Writer</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="core.css">
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+    <div class="container">
+
+        <div id="thoughts" class="thoughts">
+            <div class="thought" ng-repeat="thought in thoughts">
+                <div class="row">
+                    <div class="card">
+                        <div class="content">{{ thought.message }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="chain"></div>
+                </div>
+            </div>
+            <div class="newThought">
+                <div class="card">
+                    <div contenteditable="true" class="plainTextArea" placeholder="Type a thought and press enter...">{{ currentThought }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
