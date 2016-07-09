@@ -1,0 +1,11 @@
+<div class="container" ng-repeat="image in images">
+    <div class="hover11 column">
+        <div>
+          <figure><img ng-src="{{image.url}}"
+               alt="{{image.name}}"
+               class="gallery-image fade-animation"
+               ng-click="openInNewWindow($index)" /></figure>
+          <span>{{image.name}}</span>
+      </div>
+   </div>
+</div>
